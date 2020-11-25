@@ -1,1 +1,1 @@
-# react-monorepo-quickstart-ts
+# react-monorepo-starter-ts
