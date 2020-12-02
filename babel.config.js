@@ -3,12 +3,13 @@ module.exports = function (api) {
   // api.cache(true);
   const env = api.env();
   const isProd = api.env('production');
+  const isTest = api.env('test');
 
   // Plugins run before Presets. Plugin ordering is first to last.
   const plugins = [
     '@babel/proposal-class-properties',
     '@babel/proposal-object-rest-spread',
-    !isProd && 'react-refresh/babel',
+    !isProd && !isTest && 'react-refresh/babel',
   ].filter(Boolean);
 
   function configModule() {

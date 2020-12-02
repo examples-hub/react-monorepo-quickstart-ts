@@ -1,6 +1,6 @@
 import React from 'react';
 
-export class CheckboxWithLabel extends React.Component {
+export class CheckboxWithLabel extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.state = { isChecked: false };

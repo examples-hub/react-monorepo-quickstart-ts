@@ -6,7 +6,7 @@ module.exports = {
     es6: true,
     jest: true,
   },
-  // parser: '@typescript-eslint/parser',
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -24,13 +24,15 @@ module.exports = {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
-  plugins: ['react', 'react-hooks'],
+  plugins: ['react', 'react-hooks', '@typescript-eslint'],
   // ESLint extends configurations recursively
   extends: [
     'alloy',
     'alloy/react',
+    'alloy/typescript',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:@typescript-eslint/recommended',
   ],
   // 自定义规则，可以覆盖掉extends的配置,0-off,1-warn,2-error
   rules: {
@@ -53,10 +55,21 @@ module.exports = {
     'react/prop-types': 0,
     'react/display-name': 0,
     'react/jsx-key': 1,
-    'react-hooks/rules-of-hooks': 2,
-    'react-hooks/exhaustive-deps': 1,
     'react/prefer-es6-class': 0,
     'react/sort-comp': 1,
-    'prettier/prettier': 1,
+    'react-hooks/rules-of-hooks': 2,
+    'react-hooks/exhaustive-deps': 1,
+    '@typescript-eslint/no-explicit-any': 0,
+    '@typescript-eslint/no-unused-vars': 1,
+    '@typescript-eslint/no-empty-interface': 1,
+    '@typescript-eslint/no-empty-function': 1,
+    '@typescript-eslint/no-non-null-assertion': 1,
+    '@typescript-eslint/no-invalid-this': 1,
+    '@typescript-eslint/interface-name-prefix': 0,
+    '@typescript-eslint/explicit-function-return-type': 1,
+    '@typescript-eslint/explicit-member-accessibility': 1,
+    '@typescript-eslint/member-ordering': 0,
+    '@typescript-eslint/consistent-type-definitions': 1,
+    '@typescript-eslint/prefer-for-of': 0,
   },
 };
