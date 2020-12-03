@@ -1,7 +1,7 @@
 {
   "name": "@examples-hub/sample-app-ts",
   "version": "1.0.0",
-  "main": "dist/index.ts",
+  "main": "src/index.ts",
   "module": "src/index.ts",
   "scripts": {
     "build": "rimraf dist && npm run build:prod",

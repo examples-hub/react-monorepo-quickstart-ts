@@ -32,7 +32,7 @@
     "start": "cd packages/sample-app-ts && npm run demo",
     "syncpack-fix": "syncpack fix-mismatches",
     "syncpack-ls": "syncpack list-mismatches",
-    "test": "jest",
+    "test": "jest --config=jest.config.js",
     "test:coverage": "jest --coverage"
   },
   "husky": {
