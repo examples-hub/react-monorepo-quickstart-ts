@@ -71,5 +71,7 @@ module.exports = {
     '@typescript-eslint/member-ordering': 0,
     '@typescript-eslint/consistent-type-definitions': 1,
     '@typescript-eslint/prefer-for-of': 0,
+    '@typescript-eslint/no-var-requires': 0,
+    '@typescript-eslint/no-require-imports': 0,
   },
 };

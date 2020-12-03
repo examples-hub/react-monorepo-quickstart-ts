@@ -50,9 +50,9 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: path.resolve(process.cwd(), 'public/index.html'),
+      // template: path.resolve(process.cwd(), 'public/index.html'),
       // template: './public/demo.html',
-      filename: 'index.html',
+      // filename: 'index.html',
     }),
   ],
   resolve: {
