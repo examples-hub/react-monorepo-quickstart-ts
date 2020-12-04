@@ -1,17 +1,17 @@
 import React from 'react';
-import { CheckboxWithLabel } from '@examples-hub/sample-components-ts';
+import { CheckboxWithLabel } from '@examples-hub/sample-react-components';
 
 import './index.css';
 
 export function App() {
   return (
     <div>
-      <h1>本项目 react-monorepo-starter-ts</h1>
-      <a href='https://github.com/examples-hub/react-monorepo-starter-ts'>
+      <h1>本项目 react-monorepo-starter-es6</h1>
+      <a href='https://github.com/examples-hub/react-monorepo-starter-es6'>
         <h4>github repo</h4>
       </a>
       <div>
-        <br />
+        <hr />
         <input type='text' />
       </div>
       <div>

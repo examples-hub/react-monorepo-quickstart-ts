@@ -37,7 +37,16 @@ module.exports = {
         use: [
           isProd ? MiniCssExtractPlugin.loader : 'style-loader',
           'css-loader',
-          'sass-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              // when node-sass and sass were installed，by default sass-loader prefers sass.
+              implementation: require('sass'),
+              sassOptions: {
+                fiber: require('fibers'),
+              },
+            },
+          },
         ],
       },
       {

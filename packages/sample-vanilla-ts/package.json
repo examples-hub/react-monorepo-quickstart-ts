@@ -1,5 +1,5 @@
 {
-  "name": "@examples-hub/sample-app-ts",
+  "name": "@examples-hub/sample-vanilla-ts",
   "version": "1.0.0",
   "main": "src/index.ts",
   "module": "src/index.ts",
@@ -11,11 +11,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:log": "node index.js --name nested-a"
   },
-  "dependencies": {
-    "@examples-hub/package-a": "1.0.0",
-    "@examples-hub/sample-components-ts": "1.0.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
-  },
+  "dependencies": {},
   "devDependencies": {}
 }

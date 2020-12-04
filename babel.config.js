@@ -1,15 +1,29 @@
 module.exports = function (api) {
-  // 若build依赖于env，就不要再指定api.cache为forever或never了
+  // 若build依赖于env，就不要再指定api.cache为forever或never了,NODE_ENV
   // api.cache(true);
+
   const env = api.env();
-  const isProd = api.env('production');
-  const isTest = api.env('test');
+  // const isProd = api.env('production');
+
+  function checkAppEnv(env) {
+    return (
+      process.env.APP_ENV &&
+      process.env.APP_ENV.toLowerCase().indexOf(env) !== -1
+    );
+  }
+
+  // 用在react应用开发调试阶段，会启用@babel/preset-react、react-refresh/babel
+  const isEnvReactFresh = checkAppEnv('reactfresh');
+  // 用在react项目打包阶段，会启用@babel/preset-react，不会启用react-refresh/babel
+  const isEnvReact = checkAppEnv('react');
+
+  console.log('====process.env.APP_ENV, ', process.env.APP_ENV);
 
   // Plugins run before Presets. Plugin ordering is first to last.
   const plugins = [
-    '@babel/proposal-class-properties',
+    ['@babel/plugin-proposal-class-properties', { loose: false }],
     '@babel/proposal-object-rest-spread',
-    !isProd && !isTest && 'react-refresh/babel',
+    isEnvReactFresh && 'react-refresh/babel',
   ].filter(Boolean);
 
   function configModule() {
@@ -37,16 +51,19 @@ module.exports = function (api) {
     [
       '@babel/preset-typescript',
       {
-        isTSX: true,
+        // later: 支持其他框架的jsx
+        isTSX: !!isEnvReact,
         allExtensions: true,
         onlyRemoveTypeImports: true,
         allowNamespaces: true,
         allowDeclareFields: true,
-        onlyRemoveTypeImports: true,
       },
     ],
-    ['@babel/preset-react', { development: env !== 'production' }],
-  ];
+    isEnvReact && [
+      '@babel/preset-react',
+      { development: env !== 'production' },
+    ],
+  ].filter(Boolean);
 
   const ignore = ['node_modules'];
 

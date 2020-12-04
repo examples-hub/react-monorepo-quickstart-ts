@@ -1,8 +1,8 @@
 const baseConfig = require('../../config/jest.base');
 const pkgConfig = {
-  displayName: 'sample-comp',
+  displayName: 'sample-vanilla-ts',
   rootDir: '../..',
-  setupFilesAfterEnv: ['<rootDir>/config/setupTests.js'],
+  // setupFilesAfterEnv: ['<rootDir>/config/setupTests.js'],
 };
 
 module.exports = {

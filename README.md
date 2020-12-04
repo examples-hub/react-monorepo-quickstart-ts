@@ -57,6 +57,12 @@ npm start
   - `import`s in webpack use `module`
 - If you want to publish a package, it's better to point `main` to `dist` in the package.json
 
+- `APP_ENV` environment variable
+  - if no value is set, building es6 and ts is supported, but not react
+  - if `react*` is set, building react is supported
+  - if `reactfresh` is set, react hot reloading is supported
+  - see `babel.config.js` file for details and package.json scripts for examples
+
 ## todo
 
 - new demo page
