@@ -21,6 +21,13 @@ module.exports = function (api) {
 
   // Plugins run before Presets. Plugin ordering is first to last.
   const plugins = [
+    // [
+    //   'babel-plugin-styled-components',
+    //   {
+    //     displayName: true,
+    //     fileName: true,
+    //   },
+    // ],
     ['@babel/plugin-proposal-class-properties', { loose: false }],
     '@babel/proposal-object-rest-spread',
     isEnvReactFresh && 'react-refresh/babel',
