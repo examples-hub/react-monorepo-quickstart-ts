@@ -2,7 +2,7 @@
 
 - quickstart example for react monorepo
 
-## overview
+# overview
 
 - tech-stack
   - react 17
@@ -33,7 +33,7 @@
 - all dependencies are hoisted to top-level `node_modules` using npm workspaces(require npm 7+)
   - put all your deps of dev/build/test/engineering at top level
 
-## usage
+# usage
 
 - requirements
   - npm 7.0.0+
@@ -43,9 +43,9 @@ npm install --legacy-peer-deps
 npm start
 ```
 
-- open in your browser http://localhost:8999/
+- open a browser and go to http://localhost:8999
 
-## notes
+# notes and issues
 
 - npm 7 workspaces limitations
   - no equivalent of `yarn workspaces run cmd`
@@ -63,7 +63,7 @@ npm start
   - if `reactfresh` is set, react hot reloading is supported
   - see `babel.config.js` file for details and package.json scripts for examples
 
-## todo
+# roadmap
 
 - new demo page
 
@@ -74,6 +74,6 @@ npm start
   - support component story format
   - support mdx docs
 
-## license
+# license
 
 [MIT](https://opensource.org/licenses/MIT)

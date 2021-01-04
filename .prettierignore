@@ -2,6 +2,12 @@
 docs/
 dist/
 
+
 LICENSE.txt
 *.md
 *.mdx
+
+*.min.js
+*.min.css
+*.js.map
+*.css.map

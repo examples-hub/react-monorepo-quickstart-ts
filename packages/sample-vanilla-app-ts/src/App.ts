@@ -3,7 +3,7 @@ import './index.css';
 const change = (msg) => {
   // document.querySelector('root').innerText = msg;
   document.querySelector('#root').innerHTML = `
-  <h1>本页面支持热加载</h1>
+  <h1>本页面支持热加载 sample-vanilla-app-ts</h1>
   ${msg}
   <div>
     <input type="text" />
