@@ -10,9 +10,14 @@
 
 # test
 
+- remove enzyme
+
 # engineering
 
 - [ ] 升级@wojtekmaj/enzyme-adapter-react-17到官方版
+  - 考虑移除enzyme，只用react和cra推荐的官方测试工具
+
+- reactRefresh在非react项目中也自动注入了，影响调试分析，要移除
 
 - jest测试时最好从module字段读取import的包
 - `npm install --legacy-peer-deps` to `npm i` when npm 7 is popular and stable

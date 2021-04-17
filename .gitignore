@@ -25,6 +25,7 @@ lib/
 # hidden files 
 bak/
 -bak/
+bookmarks.json
 
 
 # below Created by https://www.gitignore.io/api/node
