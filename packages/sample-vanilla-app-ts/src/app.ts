@@ -11,7 +11,7 @@ const change = (msg) => {
   `;
 };
 
-change('test 测试 sample-vanilla-ts');
+change('测试项目 sample-vanilla-app-ts');
 
 // document.querySelector('#root').innerText = `
 // Hello, 热加载!

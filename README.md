@@ -1,6 +1,6 @@
 # react-monorepo-starter-ts
 
-- quickstart example for react monorepo
+- quickstart monorepo example for react projects and vanillajs projects
 
 # overview
 
@@ -36,7 +36,7 @@
 # usage
 
 - requirements
-  - npm 7.0.0+
+  - npm 7+
 
 ``` bash
 npm install --legacy-peer-deps
@@ -60,7 +60,7 @@ npm start
 - `APP_ENV` environment variable
   - if no value is set, building es6 and ts is supported, but not react
   - if `react*` is set, building react is supported
-  - if `reactfresh` is set, react hot reloading is supported
+  - if `reacthot` is set, react hot reloading is supported
   - see `babel.config.js` file for details and package.json scripts for examples
 
 # roadmap

@@ -1,3 +1,10 @@
+function checkAppEnv(env) {
+  return (
+    process.env.APP_ENV &&
+    process.env.APP_ENV.toLowerCase().indexOf(env) !== -1
+  );
+}
+
 module.exports = function (api) {
   // 若build依赖于env，就不要再指定api.cache为forever或never了,NODE_ENV
   // api.cache(true);
@@ -5,15 +12,10 @@ module.exports = function (api) {
   const env = api.env();
   // const isProd = api.env('production');
 
-  function checkAppEnv(env) {
-    return (
-      process.env.APP_ENV &&
-      process.env.APP_ENV.toLowerCase().indexOf(env) !== -1
-    );
-  }
+
 
   // 用在react应用开发调试阶段，会启用@babel/preset-react、react-refresh/babel
-  const isEnvReactFresh = checkAppEnv('reactfresh');
+  const isEnvReactHot = checkAppEnv('reacthot');
   // 用在react项目打包阶段，会启用@babel/preset-react，不会启用react-refresh/babel
   const isEnvReact = checkAppEnv('react');
 
@@ -30,7 +32,7 @@ module.exports = function (api) {
     // ],
     ['@babel/plugin-proposal-class-properties', { loose: false }],
     '@babel/proposal-object-rest-spread',
-    isEnvReactFresh && 'react-refresh/babel',
+    isEnvReactHot && 'react-refresh/babel',
   ].filter(Boolean);
 
   function configModule() {

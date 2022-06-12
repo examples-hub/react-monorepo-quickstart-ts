@@ -1,5 +1,5 @@
 import * as React from 'react';
-import CheckboxWithLabel from './CheckboxWithLabel';
+import CheckboxWithLabel from './checkbox-with-label';
 
 test('CheckboxWithLabel changes the text after click', () => {
   // Render a checkbox with label in the document

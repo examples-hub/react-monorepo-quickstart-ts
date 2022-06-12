@@ -7,7 +7,9 @@ module.exports = merge(devServerConfig, {
   entry: path.resolve(__dirname, '../src/render.tsx'),
   output: {
     filename: 'main.js',
+    // filename: '[name].js',
     path: path.resolve(__dirname, '../dist'),
+    // chunkFilename: '[id].[chunkhash].js',
   },
   plugins: [
     new HtmlWebpackPlugin({

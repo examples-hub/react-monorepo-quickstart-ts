@@ -10,7 +10,7 @@
     "jsx": "react",
     "allowJs": false,
     "checkJs": false,
-    "lib": ["dom", "es2015", "es2016", "es2017", "esnext"],
+    "lib": ["dom", "esnext"],
     "experimentalDecorators": false,
     "noImplicitAny": false,
     "noUnusedParameters": false,

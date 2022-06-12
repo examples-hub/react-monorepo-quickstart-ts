@@ -43,7 +43,7 @@ module.exports = {
               // when node-sass and sass were installed，by default sass-loader prefers sass.
               implementation: require('sass'),
               sassOptions: {
-                fiber: require('fibers'),
+                // fiber: require('fibers'),
               },
             },
           },
@@ -58,11 +58,11 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      // template: path.resolve(process.cwd(), 'public/index.html'),
-      // template: './public/demo.html',
-      // filename: 'index.html',
-    }),
+    // new HtmlWebpackPlugin({
+    // template: path.resolve(process.cwd(), 'public/index.html'),
+    // template: './public/demo.html',
+    // filename: 'index.html',
+    // }),
   ],
   resolve: {
     extensions: ['.ts', '.tsx', '.js', 'jsx'],
