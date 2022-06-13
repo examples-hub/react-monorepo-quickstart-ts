@@ -1,7 +1,6 @@
 function checkAppEnv(env) {
   return (
-    process.env.APP_ENV &&
-    process.env.APP_ENV.toLowerCase().indexOf(env) !== -1
+    process.env.APP_ENV && process.env.APP_ENV.toLowerCase().indexOf(env) !== -1
   );
 }
 
@@ -12,14 +11,11 @@ module.exports = function (api) {
   const env = api.env();
   // const isProd = api.env('production');
 
-
-
   // 用在react应用开发调试阶段，会启用@babel/preset-react、react-refresh/babel
   const isEnvReactHot = checkAppEnv('reacthot');
   // 用在react项目打包阶段，会启用@babel/preset-react，不会启用react-refresh/babel
   const isEnvReact = checkAppEnv('react');
-
-  console.log('====process.env.APP_ENV, ', process.env.APP_ENV);
+  console.log('==process.env.APP_ENV, ', process.env.APP_ENV);
 
   // Plugins run before Presets. Plugin ordering is first to last.
   const plugins = [

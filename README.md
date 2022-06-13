@@ -39,7 +39,8 @@
   - npm 7+
 
 ``` bash
-npm install --legacy-peer-deps
+# npm install --legacy-peer-deps
+npm i
 npm start
 ```
 

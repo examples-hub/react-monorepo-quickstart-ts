@@ -10,10 +10,7 @@
 
 # test
 
-- remove enzyme
-
 # engineering
-
 - [x] 已移除enzyme，升级@wojtekmaj/enzyme-adapter-react-17到官方版
   - 考虑移除enzyme，只用react和cra推荐的官方测试工具
 
@@ -25,5 +22,4 @@
 
 - Code splitting and asynchronous loading with dynamic `import`
 - release subpackage workflow
-
 # wontfix
