@@ -11,8 +11,6 @@
 # test
 
 # engineering
-- [x] 已移除enzyme，升级@wojtekmaj/enzyme-adapter-react-17到官方版
-  - 考虑移除enzyme，只用react和cra推荐的官方测试工具
 
 - [x] reactRefresh在非react项目中也自动注入了，影响调试分析，要移除
 

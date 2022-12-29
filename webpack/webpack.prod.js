@@ -7,7 +7,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const commonConfig = require('./webpack.common');
 
 module.exports = merge(commonConfig, {
-  mode: 'production',
+  // mode: 'production',
+  mode: 'development',
   // false 不创建map
   devtool: 'source-map',
   target: 'browserslist',

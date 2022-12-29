@@ -1,6 +1,6 @@
 {
   "name": "@examples-hub/sample-react-app-ts",
-  "version": "1.0.0",
+  "version": "1.1.1111",
   "main": "src/index.ts",
   "module": "src/index.ts",
   "scripts": {
@@ -15,7 +15,7 @@
     "test:log": "node index.js --name nested-a"
   },
   "dependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

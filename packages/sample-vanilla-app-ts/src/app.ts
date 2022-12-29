@@ -1,9 +1,9 @@
 import './index.css';
 
-const change = (msg) => {
+const change = (msg: string) => {
   // document.querySelector('root').innerText = msg;
   document.querySelector('#root').innerHTML = `
-  <h1>本页面支持热加载 sample-vanilla-app-ts</h1>
+  <h1>本页面支持热加载 sample-vanilla-app-ts 20221222</h1>
   ${msg}
   <div>
     <input type="text" />

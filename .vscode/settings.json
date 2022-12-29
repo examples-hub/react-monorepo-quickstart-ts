@@ -31,7 +31,5 @@
     "editor.defaultFormatter": "mervin.markdown-formatter"
   },
   "bookmarks.saveBookmarksInProject": true,
-  "cSpell.words": [
-    "deps"
-  ]
+  "cSpell.words": ["deps"]
 }

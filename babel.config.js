@@ -15,7 +15,7 @@ module.exports = function (api) {
   const isEnvReactHot = checkAppEnv('reacthot');
   // 用在react项目打包阶段，会启用@babel/preset-react，不会启用react-refresh/babel
   const isEnvReact = checkAppEnv('react');
-  console.log('==process.env.APP_ENV, ', process.env.APP_ENV);
+  console.log(';; process.env.APP_ENV, ', process.env.APP_ENV);
 
   // Plugins run before Presets. Plugin ordering is first to last.
   const plugins = [
@@ -33,10 +33,10 @@ module.exports = function (api) {
 
   function configModule() {
     if (env === 'esm' || env === 'es6') {
-      return false;
+      // 编译成node自身的commonjs
+      return 'auto';
     }
-    // 默认会编译成node自身的commonjs
-    return 'auto';
+    return false;
   }
 
   // Preset ordering is reversed (last to first).
